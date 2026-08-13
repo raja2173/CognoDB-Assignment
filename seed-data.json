@@ -1,0 +1,62 @@
+[
+  {
+    "name": "express",
+    "version": "4.18.2",
+    "description": "Fast, unopinionated web framework",
+    "maintainer": "dougwilson",
+    "dependencies": [
+      { "name": "accepts", "version_range": "~1.3.8" },
+      { "name": "body-parser", "version_range": "1.20.1" },
+      { "name": "debug", "version_range": "2.6.9" },
+      { "name": "qs", "version_range": "6.11.0" }
+    ]
+  },
+  {
+    "name": "debug",
+    "version": "2.6.9",
+    "description": "small debugging utility",
+    "maintainer": "visionmedia",
+    "dependencies": [
+      { "name": "ms", "version_range": "2.0.0" }
+    ]
+  },
+  {
+    "name": "ms",
+    "version": "2.0.0",
+    "description": "Millisecond conversion utility",
+    "maintainer": "rauchg",
+    "dependencies": []
+  },
+  {
+    "name": "lodash",
+    "version": "4.17.21",
+    "description": "Lodash modular utilities",
+    "maintainer": "jdalton",
+    "dependencies": []
+  },
+  {
+    "name": "react",
+    "version": "18.2.0",
+    "description": "React is a JavaScript library for building user interfaces.",
+    "maintainer": "facebook",
+    "dependencies": [
+      { "name": "loose-envify", "version_range": "^1.1.0" }
+    ]
+  },
+  {
+    "name": "loose-envify",
+    "version": "1.4.0",
+    "description": "Replace Node.js environment variables",
+    "maintainer": "zertosh",
+    "dependencies": [
+      { "name": "js-tokens", "version_range": "^4.0.0" }
+    ]
+  },
+  {
+    "name": "js-tokens",
+    "version": "4.0.0",
+    "description": "Tiny JavaScript tokenizer",
+    "maintainer": "lydell",
+    "dependencies": []
+  }
+]
