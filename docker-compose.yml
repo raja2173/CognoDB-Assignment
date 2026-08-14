@@ -1,0 +1,33 @@
+version: '3.8'
+services:
+  neo4j:
+    image: neo4j:5-enterprise
+    container_name: neo4j-graph
+    environment:
+      NEO4J_AUTH: neo4j/password
+      NEO4J_PLUGINS: '["apoc"]'
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+    volumes:
+      - ./data:/data
+      - ./logs:/logs
+      - ./import:/import
+
+  backend:
+    build: ./backend
+    ports:
+      - "3000:3000"
+    environment:
+      NEO4J_URI: bolt+s://db-f3f92e33.databases.cognodb.com
+      NEO4J_USERNAME: cognodb
+      NEO4J_PASSWORD: 322ab18b0fcac9c67b3f8256fa7f97dd
+    depends_on:
+      - neo4j
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "4200:4200"
+    depends_on:
+      - backend
